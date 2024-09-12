@@ -1,0 +1,237 @@
+[gd_scene load_steps=15 format=3 uid="uid://c77noikh5mpvq"]
+
+[ext_resource type="Texture2D" uid="uid://caeaj7lp3t6bb" path="res://assets/backgrounds/menu.png" id="1_j8ybo"]
+[ext_resource type="Script" path="res://scripts/word_levels.gd" id="1_v6pgw"]
+[ext_resource type="FontFile" uid="uid://dnmqdhvak5ibj" path="res://Jersey10Charted-Regular.ttf" id="2_yi0ef"]
+[ext_resource type="Texture2D" uid="uid://e3ufo0cs7in7" path="res://assets/ICONS/TREE.png" id="3_m4iv6"]
+[ext_resource type="Texture2D" uid="uid://c2f254b68t7lp" path="res://assets/ICONS/FOOD-P (5).png" id="4_nol6a"]
+[ext_resource type="Texture2D" uid="uid://cgq5p6mtx23ph" path="res://assets/ICONS/FOOD.png" id="5_so0pd"]
+[ext_resource type="Texture2D" uid="uid://cxck365mdxov4" path="res://assets/ICONS/FOOD-P (1).png" id="6_xgmqt"]
+[ext_resource type="FontFile" uid="uid://bu3nvaxmch4wf" path="res://Jersey10-Regular.ttf" id="6_yqcrf"]
+[ext_resource type="Texture2D" uid="uid://caisdpeaobfy0" path="res://assets/ICONS/SPACE.png" id="7_2qg55"]
+[ext_resource type="Texture2D" uid="uid://20vdtq8j43ve" path="res://assets/ICONS/FOOD-P (3).png" id="8_mm34i"]
+[ext_resource type="Texture2D" uid="uid://bhcl72m1ufv01" path="res://assets/ICONS/TECH.png" id="9_vg6xs"]
+[ext_resource type="Texture2D" uid="uid://dux0ef2gd6pgv" path="res://assets/ICONS/FOOD-P (4).png" id="10_dxgrf"]
+[ext_resource type="Texture2D" uid="uid://b0gplgg24qqk" path="res://assets/ICONS/SCIENCE.png" id="11_uakc1"]
+[ext_resource type="Texture2D" uid="uid://dqqi5ri12y0d0" path="res://assets/ICONS/FOOD-P (2).png" id="12_frfux"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_v6pgw")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+z_index = -2
+z_as_relative = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -56.0
+offset_top = -62.0
+offset_right = 44.0
+offset_bottom = 56.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_j8ybo")
+
+[node name="ColorRect" type="ColorRect" parent="TextureRect"]
+visible = false
+z_index = -1
+z_as_relative = false
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.327
+anchor_top = 0.578
+anchor_right = 0.685
+anchor_bottom = 0.68
+offset_left = 0.595978
+offset_top = -6.74802
+offset_right = 6.37994
+offset_bottom = 0.119995
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0646965, 0.0646965, 0.0646965, 0.623529)
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+z_as_relative = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Control2" type="Control" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.368627, 0.843137, 0.94902, 1)
+theme_override_colors/font_shadow_color = Color(0.0170736, 0.160435, 0.190241, 1)
+theme_override_colors/font_outline_color = Color(0.955243, 0.943805, 0.664833, 1)
+theme_override_constants/shadow_offset_x = 10
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 0
+theme_override_constants/shadow_outline_size = 0
+theme_override_fonts/font = ExtResource("2_yi0ef")
+theme_override_font_sizes/font_size = 120
+text = "Typing Quest"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Control" type="Control" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+z_index = 4
+z_as_relative = false
+layout_direction = 2
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 22
+alignment = 1
+
+[node name="TREES" type="TextureButton" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("3_m4iv6")
+texture_pressed = ExtResource("4_nol6a")
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/TREES"]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 60.0
+offset_right = 55.0
+offset_bottom = 83.0
+theme_override_colors/font_color = Color(0.88, 0.044, 0.5456, 1)
+theme_override_colors/font_shadow_color = Color(0.2, 0.2, 0.2, 0.858824)
+theme_override_colors/font_outline_color = Color(0.617224, 0.974164, 0.514889, 0.811765)
+theme_override_constants/shadow_offset_x = -2
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/outline_size = 0
+theme_override_fonts/font = ExtResource("6_yqcrf")
+theme_override_font_sizes/font_size = 24
+text = "TREE
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="FOODS" type="TextureButton" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("5_so0pd")
+texture_pressed = ExtResource("6_xgmqt")
+
+[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/FOODS"]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 60.0
+offset_right = 61.0
+offset_bottom = 83.0
+theme_override_colors/font_color = Color(0.88, 0.044, 0.5456, 1)
+theme_override_colors/font_shadow_color = Color(0.2, 0.2, 0.2, 0.858824)
+theme_override_colors/font_outline_color = Color(0.617224, 0.974164, 0.514889, 0.811765)
+theme_override_constants/shadow_offset_x = -2
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/outline_size = 0
+theme_override_fonts/font = ExtResource("6_yqcrf")
+theme_override_font_sizes/font_size = 24
+text = "FOODS"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="SPACE" type="TextureButton" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("7_2qg55")
+texture_pressed = ExtResource("8_mm34i")
+
+[node name="Label3" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/SPACE"]
+layout_mode = 0
+offset_left = 103.0
+offset_top = 60.0
+offset_right = 143.0
+offset_bottom = 83.0
+theme_override_colors/font_color = Color(0.88, 0.044, 0.5456, 1)
+theme_override_colors/font_shadow_color = Color(0.2, 0.2, 0.2, 0.858824)
+theme_override_colors/font_outline_color = Color(0.617224, 0.974164, 0.514889, 0.811765)
+theme_override_constants/shadow_offset_x = -2
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/outline_size = 0
+theme_override_fonts/font = ExtResource("6_yqcrf")
+theme_override_font_sizes/font_size = 24
+text = "TECH
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="TECH" type="TextureButton" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("9_vg6xs")
+texture_pressed = ExtResource("10_dxgrf")
+
+[node name="Label4" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/TECH"]
+layout_mode = 0
+offset_left = -80.0
+offset_top = 61.0
+offset_right = -31.0
+offset_bottom = 84.0
+theme_override_colors/font_color = Color(0.88, 0.044, 0.5456, 1)
+theme_override_colors/font_shadow_color = Color(0.2, 0.2, 0.2, 0.858824)
+theme_override_colors/font_outline_color = Color(0.617224, 0.974164, 0.514889, 0.811765)
+theme_override_constants/shadow_offset_x = -2
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/outline_size = 0
+theme_override_fonts/font = ExtResource("6_yqcrf")
+theme_override_font_sizes/font_size = 24
+text = "SPACE
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="SCIENCE" type="TextureButton" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("11_uakc1")
+texture_pressed = ExtResource("12_frfux")
+
+[node name="Label4" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/SCIENCE"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 60.0
+offset_right = 68.0
+offset_bottom = 83.0
+theme_override_colors/font_color = Color(0.88, 0.044, 0.5456, 1)
+theme_override_colors/font_shadow_color = Color(0.2, 0.2, 0.2, 0.858824)
+theme_override_colors/font_outline_color = Color(0.617224, 0.974164, 0.514889, 0.811765)
+theme_override_constants/shadow_offset_x = -2
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/outline_size = 0
+theme_override_fonts/font = ExtResource("6_yqcrf")
+theme_override_font_sizes/font_size = 24
+text = "SCIENCE"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/TREES" to="." method="_on_trees_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/FOODS" to="." method="_on_foods_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/SPACE" to="." method="_on_space_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/TECH" to="." method="_on_tech_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/SCIENCE" to="." method="_on_science_pressed"]

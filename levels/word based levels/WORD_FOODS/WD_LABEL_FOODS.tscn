@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://lfkbt1s6e7bk"]
+
+[ext_resource type="FontFile" uid="uid://dnmqdhvak5ibj" path="res://Jersey10Charted-Regular.ttf" id="1_l77ag"]
+[ext_resource type="Script" path="res://scripts/word_label.gd" id="2_mt636"]
+
+[node name="RichTextLabel" type="RichTextLabel"]
+z_index = 12
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_colors/default_color = Color(0.92, 0.2116, 0.719287, 1)
+theme_override_colors/font_shadow_color = Color(0.0227212, 0.286154, 0.489132, 1)
+theme_override_fonts/normal_font = ExtResource("1_l77ag")
+script = ExtResource("2_mt636")

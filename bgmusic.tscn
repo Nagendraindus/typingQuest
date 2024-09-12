@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://pojd2367aj34"]
+
+[ext_resource type="AudioStream" uid="uid://ldve8mxss2tt" path="res://assets/music/relaxing-lofi-beat-155068.mp3" id="1_dmb4w"]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_dmb4w")
+autoplay = true
+bus = &"bg music"

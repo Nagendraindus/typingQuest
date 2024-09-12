@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://byoklpd3wufo2"]
+
+[ext_resource type="Script" path="res://scripts/fallingletter.gd" id="1_2qusq"]
+[ext_resource type="FontFile" uid="uid://bu3nvaxmch4wf" path="res://Jersey10-Regular.ttf" id="1_fy08n"]
+
+[node name="Label" type="Label"]
+z_index = 10
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_colors/font_color = Color(0.92, 0.54648, 0.1196, 1)
+theme_override_colors/font_shadow_color = Color(0.44, 0.022, 0.1892, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_fy08n")
+theme_override_font_sizes/font_size = 50
+script = ExtResource("1_2qusq")

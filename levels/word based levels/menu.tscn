@@ -1,0 +1,106 @@
+[gd_scene load_steps=8 format=3 uid="uid://bclje7ungneac"]
+
+[ext_resource type="Texture2D" uid="uid://caeaj7lp3t6bb" path="res://assets/backgrounds/menu.png" id="1_oeepq"]
+[ext_resource type="Script" path="res://scripts/menu.gd" id="1_v4uk5"]
+[ext_resource type="FontFile" uid="uid://dnmqdhvak5ibj" path="res://Jersey10Charted-Regular.ttf" id="2_ehsy8"]
+[ext_resource type="FontFile" uid="uid://bu3nvaxmch4wf" path="res://Jersey10-Regular.ttf" id="3_ji150"]
+[ext_resource type="StyleBox" uid="uid://cjkfpmu1sj33m" path="res://levels/word based levels/MENU_G-PRES.tres" id="4_r3ufd"]
+[ext_resource type="StyleBox" uid="uid://bn1gowgrgluvk" path="res://levels/word based levels/MENU_G-HOVER.tres" id="4_rinva"]
+[ext_resource type="StyleBox" uid="uid://dwsowx1t5twmd" path="res://levels/word based levels/MENU_G.tres" id="5_2aurg"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_v4uk5")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -314.0
+offset_top = -278.0
+offset_right = 326.0
+offset_bottom = 98.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_oeepq")
+stretch_mode = 6
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="acts as separator" type="Control" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.368627, 0.843137, 0.94902, 1)
+theme_override_colors/font_shadow_color = Color(0.0170736, 0.160435, 0.190241, 1)
+theme_override_colors/font_outline_color = Color(0.955243, 0.943805, 0.664833, 1)
+theme_override_constants/shadow_offset_x = 10
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 0
+theme_override_constants/shadow_outline_size = 0
+theme_override_fonts/font = ExtResource("2_ehsy8")
+theme_override_font_sizes/font_size = 120
+text = "Typing Quest"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 40
+
+[node name="acts as separator2" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(160, 40)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_fonts/font = ExtResource("3_ji150")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/hover = ExtResource("4_rinva")
+theme_override_styles/pressed = ExtResource("4_r3ufd")
+theme_override_styles/normal = ExtResource("5_2aurg")
+text = "START GAME"
+
+[node name="Button2" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(160, 40)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_fonts/font = ExtResource("3_ji150")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/hover = ExtResource("4_rinva")
+theme_override_styles/pressed = ExtResource("4_r3ufd")
+theme_override_styles/normal = ExtResource("5_2aurg")
+text = "EXIT"
+
+[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/Button2" to="." method="_on_button_2_pressed"]
